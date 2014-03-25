@@ -3,8 +3,13 @@
 var Game = {
 	init : function(){
 		itemManager.drawItems();
-		itemManager.unlock("tools");
-		itemManager.unlock("hand");
+		for(var i=0;i<8;i++){
+			if(itemManager.allItemNames[i]==""){
+				continue;
+			}
+			itemManager.unlock(itemManager.allItemNames[i]);
+		}
+		
 	},
 	current: undefined,
 	select :function(name){
@@ -19,26 +24,12 @@ var Game = {
 			return;
 		}
 
-		this.combine(this.merge(name));
+		itemManager.combine(this.merge(name));
 		this.current=undefined;
 	},
 	//Returns a string from both the current and clicked item
 	merge : function(name){
 		return this.current +" "+ name;
-	},
-	//Unlock a specific item depending on the passed string
-	combine: function(name){
-		switch(name){
-
-			case "hand tools":
-			case "tools hand":
-				console.log(name);
-				break;
-
-			default:
-				console.log("Invalid combine")
-				break;
-		}
 	}
 }
 
