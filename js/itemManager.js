@@ -5,15 +5,15 @@ var itemManager = {
 	"tools","refinement","time","hand","",
 	"forest","mine","elements","",
 	"wood","fruit","stone","ore","earth","water","fire","aether","air","herbs","",
-	"paper","road","alcohol","iron","gold","copper","paper","ink","cottage","well","carriage","sand","",
-	"village","crown","wire","chemicals","drill","scripture","metal parts","glass","idol","",
+	"paper","road","alcohol","iron","gold","copper","ink","cottage","well","carriage","sand","",
+	"village","crown","wire","chemicals","drill","scripture","metalparts","glass","idol","",
 	"kingdom","cement","medicine","oil","electricity","",
 	"empire","street","engine","technology","paint","building","",
-	"city","vehicles","math","lab","art","holy house","library","machinery","",
+	"city","vehicles","math","lab","art","holyhouse","library","machinery","",
 	"megapolis","computer","country","spaceship","history","",
 	"science","culture","exploration","society","",
-	"flux capacitor","polymer hull","",
-	"inactive time machine",
+	"fluxcapacitor","polymerhull","",
+	"inactivetimemachine",
 	],
 	//Creates all elements
 	drawItems: function(){
@@ -63,287 +63,287 @@ var itemManager = {
 				this.unlock("fruit");
 				this.unlock("herbs");
 				break;
-
-			case "elements hand":
-			case "hand elements":
+				
+				case "elements hand":
+				case "hand elements":
 				this.unlock("fire");
 				this.unlock("earth");
 				this.unlock("air");
 				this.unlock("aether");
 				this.unlock("water");
 				break;
-
+				
 				//Tier Two
-
-			case "wood refinement":
-			case "refinement wood":
+				
+				case "wood refinement":
+				case "refinement wood":
 				this.unlock("paper");
 				break;
-
-case "earth stone":
-case "stone earth":
-	itemManager.unlock("road");
-	break;
-
-case "fruit time":
-case "time fruit":
-	itemManager.unlock("alcohol");
-	break;
-
-case "ore fire":
-case "fire ore":
-	itemManager.unlock("iron");
-	itemManager.unlock("gold");
-	itemManager.unlock("copper");
-	break;
-
-case "fruit refinement":
-case "refinement fruit":
-	itemManager.unlock("ink");
-	break;
-
-case "stone wood":
-case "wood stone":
-	itemManager.unlock("cottage");
-	break;
-
-case "stone water":
-case "water stone":
-	itemManager.unlock("well");
-	break;
-
-case "tools wood":
-case "wood tools":
-	itemManager.unlock("carriage");
-	break;
-
-case "stone air":
-case "air stone":
-	itemManager.unlock("sand");
-	break;
-
-//Tier Three
-
-case "cottage well":
-case "well cottage":
-	itemManager.unlock("village");
-	break;
-
-case "tools gold":
-case "gold tools":
-	itemManager.unlock("crown");
-	break;
-
-case "tools copper":
-case "copper tools":
-	itemManager.unlock("wire");
-	break;
-
-case "alcohol refinement":
-case "refinement alcohol":
-	itemManager.unlock("chemicals");
-	break;
-
-case "iron wood":
-case "wood iron":
-	itemManager.unlock("drill");
-	break;
-
-case "ink paper":
-case "paper ink":
-	itemManager.unlock("scripture");
-	break;
-
-case "tools iron":
-case "iron tools":
-	itemManager.unlock("metal parts");
-	break;
-
-case "sand fire":
-case "fire sand":
-	itemManager.unlock("glass");
-	break;
-
-case "gold iron":
-case "iron gold":
-	itemManager.unlock("idol");
-	break;
-
-//Tier four
-
-case "crown village":
-case "village crown":
-	itemManager.unlock("kingdom");
-	break;
-
-case "chemicals rock":
-case "rock chemicals":
-	itemManager.unlock("cement");
-	break;
-
-case "herbs chemicals":
-case "chemicals herbs":
-	itemManager.unlock("medicine");
-	break;
-
-case "drill mine":
-case "mine drill":
-	itemManager.unlock("oil");
-	break;
-
-case "elements metal parts":
-case "metal parts elements":
-	itemManager.unlock("electricity");
-	break;
-
-//Tier five
-
-case "kingdom alcohol":
-case "alcohol kingdom":
-	itemManager.unlock("empire");
-	break;
-
-case "road cement":
-case "cement road":
-	itemManager.unlock("street");
-	break;
-
-case "metal parts oil":
-case "oil metal parts":
-	itemManager.unlock("engine");
-	break;
-
-case "wire electricity":
-case "electricity wire":
-	itemManager.unlock("technology");
-	break;
-
-case "chemicals oil":
-case "oil chemicals":
-	itemManager.unlock("paint");
-	break;
-
-case "glass cement":
-case "cement glass":
-	itemManager.unlock("building");
-	break;
-
-//Tier Six
-
-case "street empire":
-case "empire street":
-	itemManager.unlock("city");
-	break;
-
-case "engine carriage":
-case "carriage engine":
-	itemManager.unlock("vehicles");
-	break;
-
-case "empire paper":
-case "paper empire":
-	itemManager.unlock("math");
-	break;
-
-case "building medicine":
-case "medicine building":
-	itemManager.unlock("lab");
-	break;
-
-case "paint paper":
-case "paper paint":
-	itemManager.unlock("art");
-	break;
-
-case "idol building":
-case "building idol":
-	itemManager.unlock("holy house");
-	break;
-
-case "scripture building":
-case "building scripture":
-	itemManager.unlock("library");
-	break;
-
-case "technology metal parts":
-case "metal parts technology":
-	itemManager.unlock("machinery");
-	break;
-
-//Tier Seven
-
-case "city machinery":
-case "machinery city":
-	itemManager.unlock("megapolis");
-	break;
-
-case "math technology":
-case "technology math":
-	itemManager.unlock("computer");
-	break;
-
-case "vehicles street":
-case "street vehicles":
-	itemManager.unlock("country");
-	break;
-
-case "vehicles technology":
-case "technology vehicles":
-	itemManager.unlock("spaceship");
-	break;
-
-case "holy house library":
-case "library holy house":
-	itemManager.unlock("history");
-	break;
-
-//Tier Eight
-
-case "computer lab":
-case "lab computer":
-	itemManager.unlock("science");
-	break;
-
-case "history art":
-case "art history":
-	itemManager.unlock("culture");
-	break;
-
-case "spaceship aether":
-case "aether spaceship":
-	itemManager.unlock("exploration");
-	break;
-
-case "megapolis country":
-case "country megapolis":
-	itemManager.unlock("society");
-	break;
-
-//Tier Nine
-
-case "society science":
-case "science society":
-	itemManager.unlock("flux capacitor");
-	break;
-
-case "exploration culture":
-case "culture exploration":
-	itemManager.unlock("polymer hull");
-	break;
-
-//Tier Ten
-
-case "flux capacitor polymer hull":
-case "polymer hull flux capacitor":
-	itemManager.unlock("inactive time machine");
-	break;
-
-//End
-
-case "inactive time machine time":
-case "time inactive time machine":
-	Game.endGame();
-	break;
+				
+				case "earth stone":
+				case "stone earth":
+				this.unlock("road");
+				break;
+				
+				case "fruit time":
+				case "time fruit":
+				this.unlock("alcohol");
+				break;
+				
+				case "ore fire":
+				case "fire ore":
+				this.unlock("iron");
+				this.unlock("gold");
+				this.unlock("copper");
+				break;
+				
+				case "fruit refinement":
+				case "refinement fruit":
+				this.unlock("ink");
+				break;
+				
+				case "stone wood":
+				case "wood stone":
+				this.unlock("cottage");
+				break;
+				
+				case "stone water":
+				case "water stone":
+				this.unlock("well");
+				break;
+				
+				case "tools wood":
+				case "wood tools":
+				this.unlock("carriage");
+				break;
+				
+				case "stone air":
+				case "air stone":
+				this.unlock("sand");
+				break;
+				
+				//Tier Three
+				
+				case "cottage well":
+				case "well cottage":
+				this.unlock("village");
+				break;
+				
+				case "tools gold":
+				case "gold tools":
+				this.unlock("crown");
+				break;
+				
+				case "tools copper":
+				case "copper tools":
+				this.unlock("wire");
+				break;
+				
+				case "alcohol fire":
+				case "fire alcohol":
+				this.unlock("chemicals");
+				break;
+				
+				case "iron wood":
+				case "wood iron":
+				this.unlock("drill");
+				break;
+				
+				case "ink paper":
+				case "paper ink":
+				this.unlock("scripture");
+				break;
+				
+				case "tools iron":
+				case "iron tools":
+				this.unlock("metalparts");
+				break;
+				
+				case "sand fire":
+				case "fire sand":
+				this.unlock("glass");
+				break;
+				
+				case "gold iron":
+				case "iron gold":
+				this.unlock("idol");
+				break;
+				
+				//Tier four
+				
+				case "crown village":
+				case "village crown":
+				this.unlock("kingdom");
+				break;
+				
+				case "chemicals stone":
+				case "stone chemicals":
+				this.unlock("cement");
+				break;
+				
+				case "herbs chemicals":
+				case "chemicals herbs":
+				this.unlock("medicine");
+				break;
+				
+				case "drill mine":
+				case "mine drill":
+				this.unlock("oil");
+				break;
+				
+				case "elements metalparts":
+				case "metalparts elements":
+				this.unlock("electricity");
+				break;
+				
+				//Tier five
+				
+				case "kingdom alcohol":
+				case "alcohol kingdom":
+				this.unlock("empire");
+				break;
+				
+				case "road cement":
+				case "cement road":
+				this.unlock("street");
+				break;
+				
+				case "metalparts oil":
+				case "oil metalparts":
+				this.unlock("engine");
+				break;
+				
+				case "wire electricity":
+				case "electricity wire":
+				this.unlock("technology");
+				break;
+				
+				case "chemicals oil":
+				case "oil chemicals":
+				this.unlock("paint");
+				break;
+				
+				case "glass cement":
+				case "cement glass":
+				this.unlock("building");
+				break;
+				
+				//Tier Six
+				
+				case "street empire":
+				case "empire street":
+				this.unlock("city");
+				break;
+				
+				case "engine carriage":
+				case "carriage engine":
+				this.unlock("vehicles");
+				break;
+				
+				case "empire paper":
+				case "paper empire":
+				this.unlock("math");
+				break;
+				
+				case "building medicine":
+				case "medicine building":
+				this.unlock("lab");
+				break;
+				
+				case "paint paper":
+				case "paper paint":
+				this.unlock("art");
+				break;
+				
+				case "idol building":
+				case "building idol":
+				this.unlock("holyhouse");
+				break;
+				
+				case "scripture building":
+				case "building scripture":
+				this.unlock("library");
+				break;
+				
+				case "technology metalparts":
+				case "metalparts technology":
+				this.unlock("machinery");
+				break;
+				
+				//Tier Seven
+				
+				case "city machinery":
+				case "machinery city":
+				this.unlock("megapolis");
+				break;
+				
+				case "math technology":
+				case "technology math":
+				this.unlock("computer");
+				break;
+				
+				case "vehicles street":
+				case "street vehicles":
+				this.unlock("country");
+				break;
+				
+				case "vehicles technology":
+				case "technology vehicles":
+				this.unlock("spaceship");
+				break;
+				
+				case "holyhouse library":
+				case "library holyhouse":
+				this.unlock("history");
+				break;
+				
+				//Tier Eight
+				
+				case "computer lab":
+				case "lab computer":
+				this.unlock("science");
+				break;
+				
+				case "history art":
+				case "art history":
+				this.unlock("culture");
+				break;
+				
+				case "spaceship aether":
+				case "aether spaceship":
+				this.unlock("exploration");
+				break;
+				
+				case "megapolis country":
+				case "country megapolis":
+				this.unlock("society");
+				break;
+				
+				//Tier Nine
+				
+				case "society science":
+				case "science society":
+				this.unlock("fluxcapacitor");
+				break;
+				
+				case "exploration culture":
+				case "culture exploration":
+				this.unlock("polymerhull");
+				break;
+				
+				//Tier Ten
+				
+				case "fluxcapacitor polymerhull":
+				case "polymerhull fluxcapacitor":
+				this.unlock("inactivetimemachine");
+				break;
+				
+				//End
+				
+				case "inactivetimemachine time":
+				case "time inactivetimemachine":
+				Game.endGame();
+				break;
 
 
 
