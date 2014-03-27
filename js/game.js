@@ -30,7 +30,18 @@ var Game = {
 	//Returns a string from both the current and clicked item
 	merge : function(name){
 		return this.current +" "+ name;
-	}
+	},
+	//Makes a certain tier visible
+	selectTier : function(tier){
+		if($(".visible").length==2){
+			$(".visible")
+			.removeClass("visible");
+		}
+
+		$("#division"+tier)
+		.addClass("visible");
+	} 
+
 }
 
 window.addEventListener("load",Game.init,false)

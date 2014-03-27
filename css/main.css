@@ -9,20 +9,67 @@
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
-	width: 600px;
+	width: 500px;
 	height: 700px;
-	background: blue;
+	background: #36373d;
 }
 
 /*Game---------------*/
 
+/*Tiers*/
+
 .divisions{
+	margin-bottom: 10px;
+	min-height: 120px;
+	border-radius: 10px;
+	top:50px;
+	display: none;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
-	width: 400px;
-	background: black;
+	width: 310px;
+	background: linear-gradient(#2f3237,#27292c);
+	border:5px inset #585858;
 }
+
+.visible{
+	display: block;
+}
+
+/*Buttons*/
+
+#leftButtons{
+	top:50px;
+	left: 0px;
+	height: 360px;
+	width: 60px;
+	position: absolute;
+	background-image:url(../images/ui/leftButtons.png);
+}
+
+#rightButtons{
+	top:50px;
+	right: 0px;
+	height: 360px;
+	width: 60px;
+	position: absolute;
+	background-image:url(../images/ui/rightButtons.png);
+}
+
+.tierButtons{
+	width: 60px;
+	height: 60px;
+}
+
+.tierButtons:hover{
+	background: rgba(138,154,139,0.3)
+}
+
+.tierButtons:active{
+	background: rgba(20,20,20,0.3)
+}
+
+/*Items*/
 
 .items{
 	background-image: url(../images/items/items.png);
@@ -31,7 +78,7 @@
 	height: 50px;
 	width: 50px;
 	display: inline-block;
-	margin: 3px;
+	margin: 10px 0px 0px 10px;
 }
 
 .items:hover{
