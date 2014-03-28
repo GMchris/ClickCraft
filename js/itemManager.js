@@ -352,7 +352,6 @@ var itemManager = {
 
 
 			default:
-				console.log("Invalid combine")
 				break;
 		}
 	}

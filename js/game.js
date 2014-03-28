@@ -17,6 +17,7 @@ var Game = {
 			itemManager.unlock(itemManager.allItemNames[i]);
 		}
 		Visual.applyTooltips();
+		Game.makeEvents();
 		
 	},
 	current: undefined,
@@ -51,6 +52,15 @@ var Game = {
 
 		$("#division"+tier)
 		.addClass("visible");
+	},
+	makeEvents:function(){
+		$("#helpButton").on("click",function(){
+			$("#helper").css("display","block");
+		});
+
+		$("#helper").on("click",function(){
+			$(this).css("display","none");
+		})
 	}
 
 }
