@@ -6,14 +6,14 @@ var itemManager = {
 	"forest","mine","elements","",
 	"wood","fruit","stone","ore","earth","water","fire","aether","air","herbs","",
 	"paper","road","alcohol","iron","gold","copper","ink","cottage","well","carriage","sand","",
-	"village","crown","wire","chemicals","drill","scripture","metalparts","glass","idol","",
+	"village","crown","wire","chemicals","drill","scripture","metal","glass","idol","",
 	"kingdom","cement","medicine","oil","electricity","",
 	"empire","street","engine","technology","paint","building","",
-	"city","vehicles","math","lab","art","holyhouse","library","machinery","",
-	"megapolis","computer","country","spaceship","history","",
+	"city","vehicle","math","lab","art","temple","library","machinery","",
+	"megapolis","computer","nation","spaceship","history","",
 	"science","culture","exploration","society","",
-	"fluxcapacitor","polymerhull","",
-	"inactivetimemachine",
+	"capacitor","hull","",
+	"temporalia",
 	],
 	//Creates all elements
 	drawItems: function(){
@@ -42,6 +42,9 @@ var itemManager = {
 		)
 		.attr("unlocked","unlocked")
 		.on("click",function(){Game.select(this.id)});
+
+		Game.iterateUnlocked();
+		Visual.unlockPrompt(name);
 	},
 	//Unlock a specific item depending on the passed string
 	combine: function(name){
@@ -156,7 +159,7 @@ var itemManager = {
 				
 				case "tools iron":
 				case "iron tools":
-				this.unlock("metalparts");
+				this.unlock("metal");
 				break;
 				
 				case "sand fire":
@@ -191,8 +194,8 @@ var itemManager = {
 				this.unlock("oil");
 				break;
 				
-				case "elements metalparts":
-				case "metalparts elements":
+				case "elements metal":
+				case "metal elements":
 				this.unlock("electricity");
 				break;
 				
@@ -208,8 +211,8 @@ var itemManager = {
 				this.unlock("street");
 				break;
 				
-				case "metalparts oil":
-				case "oil metalparts":
+				case "metal oil":
+				case "oil metal":
 				this.unlock("engine");
 				break;
 				
@@ -237,7 +240,7 @@ var itemManager = {
 				
 				case "engine carriage":
 				case "carriage engine":
-				this.unlock("vehicles");
+				this.unlock("vehicle");
 				break;
 				
 				case "empire paper":
@@ -257,7 +260,7 @@ var itemManager = {
 				
 				case "idol building":
 				case "building idol":
-				this.unlock("holyhouse");
+				this.unlock("temple");
 				break;
 				
 				case "scripture building":
@@ -265,8 +268,8 @@ var itemManager = {
 				this.unlock("library");
 				break;
 				
-				case "technology metalparts":
-				case "metalparts technology":
+				case "technology metal":
+				case "metal technology":
 				this.unlock("machinery");
 				break;
 				
@@ -282,18 +285,18 @@ var itemManager = {
 				this.unlock("computer");
 				break;
 				
-				case "vehicles street":
-				case "street vehicles":
-				this.unlock("country");
+				case "vehicle street":
+				case "street vehicle":
+				this.unlock("nation");
 				break;
 				
-				case "vehicles technology":
-				case "technology vehicles":
+				case "vehicle technology":
+				case "technology vehicle":
 				this.unlock("spaceship");
 				break;
 				
-				case "holyhouse library":
-				case "library holyhouse":
+				case "temple library":
+				case "library temple":
 				this.unlock("history");
 				break;
 				
@@ -314,8 +317,8 @@ var itemManager = {
 				this.unlock("exploration");
 				break;
 				
-				case "megapolis country":
-				case "country megapolis":
+				case "megapolis nation":
+				case "nation megapolis":
 				this.unlock("society");
 				break;
 				
@@ -323,25 +326,25 @@ var itemManager = {
 				
 				case "society science":
 				case "science society":
-				this.unlock("fluxcapacitor");
+				this.unlock("capacitor");
 				break;
 				
 				case "exploration culture":
 				case "culture exploration":
-				this.unlock("polymerhull");
+				this.unlock("hull");
 				break;
 				
 				//Tier Ten
 				
-				case "fluxcapacitor polymerhull":
-				case "polymerhull fluxcapacitor":
-				this.unlock("inactivetimemachine");
+				case "capacitor hull":
+				case "hull capacitor":
+				this.unlock("temporalia");
 				break;
 				
 				//End
 				
-				case "inactivetimemachine time":
-				case "time inactivetimemachine":
+				case "temporalia time":
+				case "time temporalia":
 				Game.endGame();
 				break;
 

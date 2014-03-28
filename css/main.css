@@ -1,6 +1,10 @@
 /*Main-------------*/
 
 *{
+	font-weight: bolder;
+	color:white;
+	font-size:20px;
+	font-family: sans-serif;
 	padding: 0px;
 	margin: 0px;
 }
@@ -11,7 +15,7 @@
 	position: relative;
 	width: 500px;
 	height: 700px;
-	background: #36373d;
+	background-image:url(../images/ui/background.png);
 }
 
 /*Game---------------*/
@@ -28,7 +32,11 @@
 	margin-left: auto;
 	position: relative;
 	width: 310px;
-	background: linear-gradient(#2f3237,#27292c);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#2f3237), to(#27292c));
+	background: -webkit-linear-gradient(#2f3237, #27292c);
+	background: -moz-linear-gradient(#2f3237, #27292c);
+	background: -o-linear-gradient(#2f3237, #27292c);
+	background: linear-gradient(#2f3237, #27292c);
 	border:5px inset #585858;
 }
 
@@ -81,10 +89,88 @@
 	margin: 10px 0px 0px 10px;
 }
 
+.unlocked>.items{
+	margin: 0px;
+}
+
 .items:hover{
 	box-shadow: 0px 0px 0px 2px rgba(255, 176, 20, 1);
 }
 
 .items:active{
 	box-shadow: 0px 0px 0px 2px rgba(71, 180, 28, 1);
+}
+
+/*Info box*/
+
+#infoBox{
+	position: absolute;
+	left: 100px;
+	bottom:50px;
+	width: 300px;
+	height: 150px;
+
+}
+
+#currentItem{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/items/items.png);
+}
+
+#currentItemName{
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+	position: absolute;
+	left:70px;
+	top:12px;
+
+}
+
+#unlockedItems{
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+	position: absolute;
+	right: 20px;
+	top:12px;
+}
+
+/*Extra*/
+
+.unlockedPrompt{
+	position: relative;
+	z-index: 50;
+	margin:10px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#56565c), to(#4c4d53));
+	background: -webkit-linear-gradient(#56565c, #4c4d53);
+	background: -moz-linear-gradient(#56565c, #4c4d53);
+	background: -o-linear-gradient(#56565c, #4c4d53);
+	background: linear-gradient(#56565c, #4c4d53);
+	border:5px outset #7a7a7a;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 10px;
+	width: 200px;
+	padding: 10px;
+}
+
+.unlockedItem{
+	border-radius: 3px;
+	display:inline-block;
+	height: 50px;
+	width: 50px;
+}
+
+.unlockedName{
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+	position: absolute;
+	left:70px;
+	top:25px;
+	display: inline-block;
+}
+
+#messages{
+	top:0px;
+	left:100px;
+	position: absolute;
+	width: 300px;
 }
