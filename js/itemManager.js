@@ -142,8 +142,8 @@ var itemManager = {
 				this.unlock("wire");
 				break;
 				
-				case "alcohol fire":
-				case "fire alcohol":
+				case "alcohol refinement":
+				case "refinement alcohol":
 				this.unlock("chemicals");
 				break;
 				
@@ -179,8 +179,8 @@ var itemManager = {
 				this.unlock("kingdom");
 				break;
 				
-				case "chemicals stone":
-				case "stone chemicals":
+				case "sand stone":
+				case "stone sand":
 				this.unlock("cement");
 				break;
 				

@@ -55,7 +55,17 @@ var Game = {
 	},
 	makeEvents:function(){
 		$("#helpButton").on("click",function(){
-			$("#helper").css("display","block");
+			$("#helper").css({
+				"display":"block",
+				"background-image":"url(images/ui/help.png)"
+			});
+		});
+
+		$("#creditsButton").on("click",function(){
+			$("#helper").css({
+				"display":"block",
+				"background-image":"url(images/ui/credits.png)"
+			});
 		});
 
 		$("#helper").on("click",function(){
