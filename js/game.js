@@ -9,7 +9,6 @@ var Game = {
 	},
 
 	init : function(easy){
-		console.log(easy);
 
 		itemManager.drawItems();
 		for(var i=0;i<8;i++){

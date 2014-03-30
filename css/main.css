@@ -208,6 +208,7 @@ html{
 }
 
 #helper{
+	background-size:100% 100%;
 	top:0px;
 	cursor: pointer;
 	display: none;
