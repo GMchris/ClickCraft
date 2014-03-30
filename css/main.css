@@ -10,12 +10,41 @@
 }
 
 #gameScreen{
+	margin-top: 50px;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
 	width: 500px;
 	height: 700px;
 	background-image:url(../images/ui/background.png);
+	background-size: 100% 100%;
+}
+
+#play{
+	width: 100%;
+	height:100%;
+	z-index: 200;
+	position: relative;
+	top:0px;
+	left:0px;
+	background-size:100% 100%;
+	background-image:url(../images/ui/play.png);
+}
+
+#static{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0px;
+}
+
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+
+html{
+	background: linear-gradient(to right, #272727,#151515,#272727);
 }
 
 /*Game---------------*/
@@ -31,7 +60,7 @@
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
-	width: 310px;
+	width: 60%;
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#2f3237), to(#27292c));
 	background: -webkit-linear-gradient(#2f3237, #27292c);
 	background: -moz-linear-gradient(#2f3237, #27292c);
@@ -80,6 +109,7 @@
 /*Items*/
 
 .items{
+	background-size:100% 100%;
 	background-image: url(../images/items/items.png);
 	cursor: pointer;
 	border-radius: 5px;
@@ -105,9 +135,10 @@
 
 #infoBox{
 	position: absolute;
-	left: 100px;
-	bottom:50px;
-	width: 300px;
+	margin-left: 20%;
+	margin-right:20%;
+	top:73%;
+	width: 60%;
 	height: 150px;
 
 }
@@ -171,9 +202,9 @@
 
 #messages{
 	top:0px;
-	left:100px;
+	left:20%;
 	position: absolute;
-	width: 300px;
+	width: 60%;
 }
 
 #helper{
@@ -186,6 +217,7 @@
 }
 
 .extraButtons{
+	padding: 5px;
 	cursor: pointer;
 	bottom:20px;
 	text-align: center;
@@ -208,12 +240,59 @@
 	background: linear-gradient(#ff9e00, #ffcb00);
 }
 
+#easy{
+	height: 7%;
+	width: 20%;
+	font-size: 1.5em;
+	top:50%;
+	left:40%;
+}
+
+#hard{
+	font-size: 1.5em;
+	height: 7%;
+	width: 20%;
+	top:65%;
+	left:40%;
+}
+
 #helpButton{
-	right:120px;
-	width: 60px;
+	left:0%;
 }
 
 #creditsButton{
-	right:20px;
-	width: 80px;
+	left:40%;
+}
+
+#end{
+	display: none;
+	z-index: 200;
+	background: white;
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.endText{
+	text-align: center;
+	width:60%;
+	color: black;
+	margin:5% 20% 0% 20%;
+}
+
+/*Screen*/
+
+@media only screen and (max-height:750px) {
+	#gameScreen{
+		margin-top:0px;
+	}
+}
+
+@media only screen and (max-width : 479px) {
+	#gameScreen{
+		margin:0px;
+		width: 100%;
+		height: 100%;
+	}
 }

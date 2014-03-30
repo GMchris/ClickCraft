@@ -8,7 +8,9 @@ var Game = {
 		$("#unlockedItems").text(this.unlocked+"/ 69")
 	},
 
-	init : function(){
+	init : function(easy){
+		console.log(easy);
+
 		itemManager.drawItems();
 		for(var i=0;i<8;i++){
 			if(itemManager.allItemNames[i]==""){
@@ -16,9 +18,11 @@ var Game = {
 			}
 			itemManager.unlock(itemManager.allItemNames[i]);
 		}
-		Visual.applyTooltips();
 		Game.makeEvents();
-		
+		if(easy==true){
+			Visual.applyTooltips();
+		}
+		$("#play").remove();
 	},
 	current: undefined,
 	select :function(name){
@@ -71,8 +75,25 @@ var Game = {
 		$("#helper").on("click",function(){
 			$(this).css("display","none");
 		})
-	}
+	},
+	endGame : function(){
+		var textIndex = 0;
+		var text = ["You did it","time travel","- the ultimate achievement.","The ultimate prize for humanity's efforts","","But where do you go from here?","To the past to correct mistakes?","To the future to see what else mankind was able to acomplish?","Will you stay in the present, since you're not that curious?","","No..","that wouldn't be like you at all."];
+		$("#end")
+		.fadeIn(2000)
+		var endInterval =setInterval(function(){
+			$("<div/>")
+			.addClass("endText")
+			.text(text[textIndex])
+			.fadeIn(2000)
+			.appendTo("#end");
 
+			textIndex++;
+			if(textIndex==12){
+				clearInterval(endInterval);
+			}
+		},3000)
+	}
 }
 
 var Visual = {
@@ -131,5 +152,3 @@ var Visual = {
 		})
 	}
 }
-
-window.addEventListener("load",Game.init,false)
